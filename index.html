@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Physics Prep</title>
-    <meta name="description" content="JEE/NEET physics preparation" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
-    />
+    <title>Vidya-RT — Learn Limitless</title>
+    <meta name="description" content="Real-time mock engine for JEE, NEET and Boards. Full-length mocks, hyper-local percentiles, sub-concept reports." />
+    <link rel="icon" type="image/png" href="/brand/favicon.png" />
 
-    <meta property="og:title" content="Physics Prep" />
-    <meta property="og:description" content="JEE/NEET physics preparation" />
+    <meta property="og:title" content="Vidya-RT — Learn Limitless" />
+    <meta property="og:description" content="Real-time mock engine for JEE, NEET and Boards." />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="/brand/logo-mark.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -27,21 +24,15 @@
       crossorigin
     />
 
-    <!-- Detect dark mode preference and set the class before next-themes loads. This avoids a flash of unstyled content (FOUC) when the page loads. -->
+    <!-- This site has one deliberate dark aesthetic — force it before
+         next-themes loads so there's no flash of a wrong theme. -->
     <script>
       try {
-        let theme = localStorage.getItem("theme");
-        if (theme === "system" || !theme) {
-          let prefersDark = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-          ).matches;
-          theme = prefersDark ? "dark" : "light";
-        }
-        document.documentElement.classList.add(theme);
+        document.documentElement.classList.add("dark");
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/assets/index-CPKyMkZX.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BLelNabx.css">
+    <script type="module" crossorigin src="/assets/index-B6BmCCnC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BltoSWMN.css">
   </head>
   <body>
     <div id="root"></div>
