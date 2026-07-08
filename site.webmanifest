@@ -1,0 +1,27 @@
+{
+  "name": "Vidya-RT — Mock Test Engine for JEE, NEET & Boards",
+  "short_name": "Vidya-RT",
+  "description": "Real-time mock test engine for JEE, NEET, and Board exams. 42,000+ vetted questions, hyper-local percentiles, and sub-concept reports.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/brand/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/brand/logo-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"]
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://vidyart.info/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://vidyart.info/brand/logo-mark.png</image:loc>
+      <image:title>Vidya-RT Logo</image:title>
+      <image:caption>Mock test engine for JEE, NEET and Board exams</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-university-medals.jpg</image:loc>
+      <image:title>Student's study desk, medals, and university gate</image:title>
+      <image:caption>The journey from practice to rank</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-girl-studying.jpg</image:loc>
+      <image:title>Student studying with floating science diagrams</image:title>
+      <image:caption>Adaptive learning in action</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-sciencelab.jpg</image:loc>
+      <image:title>Science dreamscape</image:title>
+      <image:caption>Science laboratory for JEE and NEET preparation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-campus.png</image:loc>
+      <image:title>IIT/AIIMS campus gate at dusk</image:title>
+      <image:caption>Destination campuses for JEE and NEET aspirants</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-boy-studying.jpg</image:loc>
+      <image:title>Focused student surrounded by formulas and study material</image:title>
+      <image:caption>Focused preparation for competitive exams</image:caption>
+    </image:image>
+  </url>
+</urlset>

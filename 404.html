@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vidya-RT — JEE, NEET & Board Mock Test Engine</title>
+    <meta name="description" content="Real-time mock test engine for JEE, NEET and Boards. 42,000+ vetted questions, full-length mocks, hyper-local percentiles, and sub-concept reports." />
+    <!--
+      GitHub Pages SPA redirect trick for custom domain:
+      When a user navigates to a deep link (e.g. /some-route) on GitHub Pages,
+      the server returns this 404.html. We capture the intended path, redirect
+      to the root with the path encoded as a query param, then the app reads it
+      and restores the route via react-router.
+
+      For custom domains (vidyart.info), pathSegmentsToKeep = 0.
+    -->
+    <script>
+      var pathSegmentsToKeep = 0; // 0 for custom domain, 1 for project pages
+
+      var l = window.location;
+      var path = l.pathname;
+      var encodedPath = path
+        .split("/")
+        .slice(pathSegmentsToKeep)
+        .join("/")
+        .replace(/&/g, "~and~");
+
+      var base = l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "");
+      var newPath = base + "/" + (pathSegmentsToKeep ? path.split("/")[1] + "/" : "") + "?p=/" + encodedPath + l.hash;
+
+      if (!l.search.includes("p=/")) {
+        l.replace(newPath);
+      }
+    </script>
+
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://vidyart.info/" />
+    <meta property="og:title" content="Vidya-RT — JEE, NEET & Board Mock Test Engine" />
+    <meta property="og:description" content="Real-time mock test engine for JEE, NEET and Boards. 42,000+ vetted questions, hyper-local percentiles, and sub-concept reports." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <noscript>
+      <div style="max-width: 800px; margin: 0 auto; padding: 2rem; font-family: Georgia, serif;">
+        <h1>Vidya-RT — Real-Time Mock Test Engine for JEE, NEET & Board Exams</h1>
+        <p>
+          Vidya-RT is a real-time mock test engine for JEE, NEET, and Board exam preparation.
+          Practice with 42,000+ vetted questions, full-length mocks, hyper-local percentiles,
+          and sub-concept level performance reports. Please enable JavaScript to continue.
+        </p>
+        <p><a href="/">Go to homepage</a></p>
+      </div>
+    </noscript>
+  </body>
+</html>
