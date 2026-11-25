@@ -1,0 +1,186 @@
+/* Content-first layouts: one promise, a short list, then optional detail. */
+:root { --scan-rule: rgba(210,225,214,.2); }
+html { scroll-behavior: auto; scroll-padding-top: 100px; }
+body { font-size: 16px; }
+body .wrap { width: min(1180px, calc(100% - 48px)); }
+body h1 { font-size: clamp(3rem,6.5vw,5.6rem); line-height: 1.04; letter-spacing: -.035em; }
+body h2, body .section-head h2, body .paper-science-intro h2, body .report-intro h2, body .destination-copy h2, body .student-faq h2, body .answer-section h2 { font-size: clamp(2.4rem,4.5vw,3.75rem); line-height: 1.1; letter-spacing: -.025em; }
+body h3 { line-height: 1.2; }
+body .eyebrow { font-size: .75rem; letter-spacing: .08em; line-height: 1.6; }
+body .section, body .journey-section, body .report-section, body .subject-section, body .paper-science, body .report-band, body .secure-band { padding-block: 72px; }
+body .section-head, body .paper-science-intro, body .report-intro { display: grid; grid-template-columns: 1.15fr 1fr; gap: 40px; align-items: start; margin: 0 0 36px; }
+body .section-head .eyebrow { margin-bottom: 16px; }
+body .scan-copy { min-width: 0; max-width: 56ch; }
+body .scan-copy > p { font: 400 1.0625rem/1.65 var(--sans); margin: 0 0 16px; color: inherit; }
+body .scan-list { display: grid; gap: 12px; list-style: disc outside; padding: 0 0 0 21px; margin: 0 0 24px; font: 400 1rem/1.65 var(--sans); color: inherit; text-align: left; }
+body .scan-list > li { display: list-item; padding: 0 0 0 3px; border: 0; font: inherit; min-width: 0; }
+body .scan-list > li::marker { color: #62c791; font-size: 1em; }
+body .scan-list > li::before { content: none; }
+body .scan-list strong { font-weight: 600; color: inherit; }
+body .hero .scan-list { margin-block: 16px 28px; }
+body .hero .scan-copy { color: #e4e8e1; }
+body .button { min-height: 46px; font-size: .875rem; padding: 13px 19px; white-space: normal; line-height: 1.4; text-align: center; }
+body .text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .875rem; line-height: 1.5; }
+body .brand { display: inline-flex; flex-direction: row; align-items: center; gap: 9px; }
+body .brand .brand-icon { width: 34px; height: 38px; }
+body .brand-name { font: 500 25px/1 var(--serif); white-space: nowrap; }
+body .brand-name em { font: 700 1em/1 var(--serif); color: var(--green); letter-spacing: 0; margin: 0; }
+body .scan-details { border: 1px solid var(--scan-rule); border-radius: 12px; margin: 28px 0; background: #151e18; color: #ecf0e9; overflow: hidden; }
+body .scan-details > summary { padding: 22px 26px; cursor: pointer; font: 500 1.0625rem/1.5 var(--sans); }
+body .scan-details > summary::marker { color: var(--green); }
+body .scan-details[open] > summary { border-bottom: 1px solid var(--scan-rule); }
+body .scan-details-body { padding: 24px; }
+body .demo-explainer { font: .875rem/1.6 var(--sans); color: #c3cfc4; margin-bottom: 24px; }
+body .scan-section-head { margin-bottom: 32px; }
+body .scan-section-head h2 { margin: 16px 0; }
+body .scan-section-head h2 em { color: var(--green); font-weight: 500; }
+body .scan-section-head p { font: 1rem/1.7 var(--sans); color: #c3cfc4; }
+body .scan-caption { padding: 16px 20px; background: #19251d; color: #e2e9df; font: .875rem/1.5 var(--sans); }
+body .faq-grid, body .answer-grid { display: block; margin: 28px 0; }
+body .faq-grid > details, body .answer-grid > details, body .faq > details { padding: 0; border-bottom: 1px solid var(--scan-rule); }
+body .faq-grid summary, body .answer-grid summary, body .faq summary { font: 500 1.0625rem/1.5 var(--sans); padding: 22px 0; cursor: pointer; }
+body .faq-grid .scan-list, body .answer-grid .scan-list, body .faq .scan-list { max-width: 70ch; margin: 0 0 24px; }
+body .reveal, body .story-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+body .footer { gap: 24px; padding-block: 32px; }
+body .footer > div { display: flex; flex-wrap: wrap; gap: 16px 24px; }
+/* Student: clear choices and four different learning illustrations. */
+.student-site .hero { min-height: 660px; }
+.student-site .hero-inner { min-height: 660px; }
+.student-site .hero-copy { width: 65%; padding: 64px 0; }
+.student-site .hero h1 { font-size: clamp(3.3rem,7vw,6rem); line-height: 1.03; margin: 24px 0; }
+.student-site .hero .scan-copy { max-width: 540px; }
+.student-site .scroll-cue { display: none; }
+.student-site .practice-story .section-head { grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; margin-bottom: 32px; }
+.student-site .practice-story .section-head h2 { font-size: clamp(2.25rem,3.6vw,3.125rem); line-height: 1.12; margin: 0; }
+.student-site .practice-story .section-head .scan-list { margin-bottom: 0; gap: 8px; }
+.student-site .practice-layout { grid-template-columns: 1fr 1fr; align-items: start; gap: 40px; margin-top: 0; }
+.student-site .practice-visual { min-height: 0; height: auto; margin: 0; overflow: hidden; border-radius: 12px; position: sticky; top: 110px; }
+.student-site .practice-visual > img { position: static; display: block; width: 100%; height: auto; aspect-ratio: 1672/941; object-fit: cover; filter: none; opacity: 1; transform: none; }
+.student-site .practice-visual::before, .student-site .practice-visual::after { display: none; }
+.student-site .practice-list { display: grid; grid-template-columns: minmax(0,1fr); justify-content: stretch; align-content: start; gap: 0; padding: 0 24px; border: 1px solid var(--scan-rule); border-radius: 12px; background: #111a14; min-width: 0; }
+.student-site .practice-item { display: block; padding: 24px 0; min-height: 0; border: 0; border-bottom: 1px solid var(--scan-rule); }
+.student-site .practice-item:first-child { padding-top: 24px; }
+.student-site .practice-item h3 { font-size: 1.625rem; line-height: 1.2; margin: 0 0 12px; }
+.student-site .practice-item .scan-list { margin-bottom: 0; gap: 8px; }
+.student-site .practice-list > .inline-link { grid-column: 1 / -1; margin: 0; padding: 22px 0; line-height: 1.5; }
+.student-site .learning-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+.student-site .learning-card { overflow: hidden; border: 1px solid var(--scan-rule); border-radius: 12px; background: #111a14; }
+.student-site .learning-card figure { margin: 0; aspect-ratio: 3/2; overflow: hidden; }
+.student-site .learning-card img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.student-site .learning-card > div { padding: 26px; }
+.student-site .learning-card h3 { font: 500 2rem/1.2 var(--serif); margin: 0 0 18px; }
+.student-site .learning-card .scan-list { margin-bottom: 0; }
+.student-site .report-depth { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin-top: 32px; }
+.student-site .report-depth > div { border: 0; border-top: 1px solid var(--scan-rule); padding: 24px 0 0; }
+.student-site .report-depth > div > span { display: none; }
+.student-site .report-depth > div > b { font: 500 1.75rem/1.2 var(--serif); display: block; margin-bottom: 16px; }
+.student-site .subject-card { min-height: 0; padding: 28px; }
+.student-site .subject-card h3 { font-size: 2rem; }
+.student-site .subject-card p { font: 1rem/1.7 var(--sans); margin-bottom: 20px; }
+.student-site .subject-card .scan-list { margin-bottom: 0; }
+.student-site .destination-section { min-height: 520px; }
+.student-site .destination-copy { padding-block: 64px; }
+.student-site .destination-copy .scan-copy { margin: 24px 0; }
+/* Teacher: actionable benefits first; technical demonstrations stay optional. */
+.teacher-site .hero { grid-template-columns: 1.05fr 1fr; gap: 44px; min-height: 0; padding-block: 64px; }
+.teacher-site .hero h1 { margin-top: 24px; }
+.teacher-site .hero-art { height: auto; aspect-ratio: auto; overflow: hidden; border-radius: 12px; margin: 0; }
+.teacher-site .hero-art > img { display: block; position: static; width: 100%; height: auto; aspect-ratio: 1586/992; object-fit: cover; filter: none; opacity: 1; transform: none; }
+.teacher-site .hero-art::before, .teacher-site .hero-art::after { display: none; }
+.teacher-site .actions { gap: 16px 24px; }
+.teacher-site .teacher-feature-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.teacher-site .teacher-feature-grid article { padding: 28px; border: 1px solid var(--scan-rule); background: #19231b; border-radius: 12px; }
+.teacher-site .teacher-feature-grid h3 { font: 500 1.875rem/1.2 var(--serif); margin-bottom: 20px; }
+.teacher-site .teacher-feature-grid .scan-list { margin-bottom: 0; }
+.teacher-site .paper-science .eyebrow { margin-bottom: 24px; }
+.teacher-site .report-intro { margin-top: 24px; }
+.teacher-site .teacher-ethos, .teacher-site .teacher-next-step { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; padding: 0; background: transparent; border: 0; margin-top: 48px; }
+.teacher-site .teacher-ethos figure, .teacher-site .teacher-next-step figure { min-height: 0; width: 100%; height: auto; aspect-ratio: 3/2; border-radius: 12px; overflow: hidden; }
+.teacher-site .teacher-ethos figure img, .teacher-site .teacher-next-step figure img { position: static; width: 100%; height: 100%; object-fit: cover; filter: none; transform: none !important; opacity: 1; }
+.teacher-site .teacher-ethos > div { padding: 0; }
+.teacher-site .teacher-ethos h3, .teacher-site .teacher-next-step h3 { font: 500 clamp(1.9rem,3vw,2.5rem)/1.2 var(--serif); margin-block: 16px; }
+.teacher-site .ethos-signoff { display: none; }
+.teacher-site .report-depth-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.teacher-site .report-depth-grid article { padding: 24px 0; }
+.teacher-site .report-depth-grid h3 { font-size: 1.625rem; margin-block: 16px; }
+.teacher-site .report-depth-grid .scan-list { font-size: 1rem; }
+.teacher-site .report-close { display: none; }
+.teacher-site .workflow { padding-top: 0; }
+.teacher-site .secure-layout { gap: 48px; }
+.teacher-site .secure-list p { font: 1rem/1.7 var(--sans); }
+.teacher-site .secure-list small { font: .875rem/1.7 var(--sans); }
+.teacher-site .final-cta { padding-block: 60px; }
+.teacher-site .cta-inner p { margin: 24px 0; }
+.teacher-site .p-hero { padding-block: 64px; }
+.teacher-site .p-hero .scan-copy { margin-bottom: 28px; }
+.teacher-site .free-band .scan-list, .teacher-site .contact-band .scan-list { color: #273b2c; }
+.teacher-site .plan .plan-for { min-height: 0; }
+@media(max-width:900px) {
+ body .section-head, body .paper-science-intro, body .report-intro { grid-template-columns: 1fr; gap: 24px; }
+ .teacher-site .hero { grid-template-columns: 1fr; }
+ .teacher-site .hero-art { max-width: 650px; width: 100%; }
+ .teacher-site .report-depth-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .student-site .hero-copy { width: 80%; }
+ .student-site .practice-story .section-head { grid-template-columns: 1fr; gap: 24px; }
+ .student-site .practice-layout { grid-template-columns: 1fr; gap: 28px; }
+ .student-site .practice-visual { position: relative; top: auto; max-width: 650px; }
+ .student-site .practice-list { grid-template-columns: 1fr 1fr; column-gap: 28px; }
+ .student-site .practice-item:first-child { padding-top: 24px; }
+}
+@media(max-width:650px) {
+ body .wrap { width: calc(100% - 32px); }
+ body .section, body .journey-section, body .report-section, body .subject-section, body .paper-science, body .report-band, body .secure-band { padding-block: 48px; }
+ body h1, .student-site .hero h1 { font-size: clamp(2.8rem,11vw,4rem); }
+ body h2, body .section-head h2, body .paper-science-intro h2, body .report-intro h2, body .destination-copy h2, body .student-faq h2, body .answer-section h2 { font-size: 2.5rem; }
+ body .scan-copy > p { font-size: 1rem; }
+ body .scan-list { gap: 12px; font-size: 1rem; line-height: 1.7; }
+ body .scan-details > summary { padding: 18px; }
+ body .scan-details-body { padding: 14px; }
+ body .brand-name { font-size: 23px; }
+ .student-site .hero, .student-site .hero-inner { min-height: 0; }
+ .student-site .hero-copy { width: 100%; padding: 48px 0; }
+ .student-site .hero-wash { background: linear-gradient(90deg,#080a09ed,#080a09cc); }
+ .student-site .learning-grid, .student-site .practice-list, .student-site .report-depth { grid-template-columns: 1fr; }
+ .student-site .learning-card > div { padding: 22px; }
+ .student-site .learning-card h3 { font-size: 1.8rem; }
+ .student-site .subject-card { padding: 24px; }
+ .teacher-site .teacher-feature-grid, .teacher-site .report-depth-grid, .teacher-site .teacher-ethos, .teacher-site .teacher-next-step { grid-template-columns: 1fr; }
+ .teacher-site .hero { padding-block: 40px; gap: 28px; }
+ .teacher-site .hero h1 br { display: none; }
+ .teacher-site .hero h1 em { display: block; margin-top: 8px; }
+ .teacher-site .teacher-feature-grid article { padding: 24px; }
+ .teacher-site .teacher-next-step { margin-top: 0; }
+ .teacher-site .teacher-next-step figure { order: -1; }
+ .teacher-site .report-depth-grid { gap: 0; }
+ .teacher-site .workflow { padding-top: 0; }
+ body .footer { flex-wrap: wrap; }
+ body .footer > div { width: 100%; gap: 16px; }
+}
+/* Final typography checks across the new sections and optional demos. */
+body .scan-section-head h2 { font-family: var(--serif); font-weight: 500; }
+.teacher-site .hero h1 { font-size: clamp(2.75rem,5.2vw,4.25rem); line-height: 1.08; }
+.teacher-site .report-demo small, .teacher-site .report-panel span,
+.teacher-site .demo-kpis span, .teacher-site .chart-caption,
+.teacher-site .taxonomy-node small, .teacher-site .taxonomy-trips > b,
+.teacher-site .taxonomy-note, .teacher-site .taxonomy-foot > b,
+.teacher-site .item-blueprint > small, .teacher-site .option-path > b,
+.teacher-site .engine-checks > b, .teacher-site .paper-science-note { font-size: .8125rem; line-height: 1.5; }
+.teacher-site .taxonomy-trips > span, .teacher-site .taxonomy-foot > span,
+.teacher-site .engine-label > span, .teacher-site .item-blueprint > span,
+.teacher-site .option-path > span, .teacher-site .engine-checks > span { font-size: .75rem; line-height: 1.5; }
+.student-site .report-view small, .student-site .report-view article > span,
+.student-site .review-filters > span, .student-site .student-dashboard-stats article > span { font-size: .75rem; line-height: 1.5; }
+@media(max-width:650px) {
+ .teacher-site .hero h1 { font-size: 2.8rem; }
+ .teacher-site .paper-engine { grid-template-columns: minmax(0,1fr); }
+ .teacher-site .option-path { grid-template-columns: minmax(0,1fr); }
+ .teacher-site .taxonomy-tree { grid-template-columns: minmax(0,1fr); }
+ .teacher-site .chapter-row { grid-template-columns: 2fr repeat(4,1fr); }
+}
+
+@media(max-width:650px) {
+ body .topbar .button { font-size: .75rem; padding: 11px 12px; }
+ .student-site .header-actions { gap: 6px; max-width: 100%; }
+ .student-site .teacher-switch { font-size: .75rem; }
+ .student-site .menu-toggle { flex-shrink: 0; }
+}

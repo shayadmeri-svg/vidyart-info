@@ -1,0 +1,20 @@
+# VidyaRT for Students
+
+> JEE and NEET mock tests, chapter practice, worked solutions, and performance reports.
+
+## Pages
+- [IIT JEE & NEET Mock Tests, Practice & Reports | VidyaRT](https://vidyart.info/): Practise for IIT JEE and NEET with VidyaRT mock tests, chapter-wise questions, worked solutions, and performance reports. Find your next revision focus.
+- [IIT JEE Mock Tests & Chapter Practice | VidyaRT](https://vidyart.info/jee-mock-tests.html): Prepare for IIT JEE with timed mock tests, Physics, Chemistry and Maths practice, worked solutions, and reports that help you choose what to revise next.
+- [NEET Mock Tests & PCB Practice Online | VidyaRT](https://vidyart.info/neet-mock-tests.html): Build your NEET practice routine with Physics, Chemistry and Biology mock tests, chapter practice, worked solutions, and clear performance reports on VidyaRT.
+- [JEE & NEET Chapter-wise Practice | VidyaRT](https://vidyart.info/chapter-wise-practice.html): Turn weak chapters into focused practice for JEE and NEET. Review Physics, Chemistry, Maths and Biology concepts with worked solutions and chapter reports.
+- [How to Analyse JEE & NEET Mock Tests | VidyaRT](https://vidyart.info/how-to-analyse-mock-tests.html): A practical mock-test analysis guide for JEE and NEET: sort mistakes, review accuracy and timing, and turn your report into a focused revision plan.
+
+## Product boundaries
+- Student sign-in: https://app.vidyart.online/
+- Teacher sign-in: https://admin.vidyart.online/
+- Plans and contact: https://vidyart.com/plans.html
+- About VidyaRT: https://vidyart.com/about.html
+- Available assessments depend on the student account or institute.
+- Features depend on the plan. Free quotas are lifetime limits.
+- Rank estimates are planning aids, not official results or admission guarantees.
+- AI-generated questions and solutions require teacher review.

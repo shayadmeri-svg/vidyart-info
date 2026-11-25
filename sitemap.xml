@@ -1,11 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://vidyart.info/</loc>
     <lastmod>2026-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image><image:loc>https://vidyart.info/brand/logo-mark.png</image:loc><image:title>VidyaRT logo</image:title></image:image>
-    <image:image><image:loc>https://vidyart.info/images/hero-university-medals.jpg</image:loc><image:title>Student preparing for an entrance exam</image:title></image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-university-medals.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/online-learning.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/breakthrough.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/sharing-ideas.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/learning-together.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/next-opportunity.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://vidyart.info/images/hero-campus.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vidyart.info/jee-mock-tests.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image>
+      <image:loc>https://vidyart.info/images/online-learning.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vidyart.info/neet-mock-tests.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image>
+      <image:loc>https://vidyart.info/images/breakthrough.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vidyart.info/chapter-wise-practice.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image>
+      <image:loc>https://vidyart.info/images/sharing-ideas.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://vidyart.info/how-to-analyse-mock-tests.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image>
+      <image:loc>https://vidyart.info/images/next-opportunity.webp</image:loc>
+    </image:image>
   </url>
 </urlset>

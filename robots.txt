@@ -1,4 +1,15 @@
+# Public marketing and guide pages are crawlable.
 User-agent: *
+Allow: /
+
+# Search discovery; these groups do not change training-crawler preferences.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://vidyart.info/sitemap.xml
