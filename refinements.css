@@ -1,0 +1,95 @@
+/* Readable copy and responsive controls, preserving the existing visual identity. */
+body { font-size: 1rem; }
+main, section, article, .hero-copy, .journey-chapters { min-width: 0; }
+:focus-visible { outline: 3px solid #62d596; outline-offset: 5px; }
+.skip-link { position: fixed; top: -100px; left: 1rem; z-index: 100; padding: 1rem; background: #62d596; color: #07120b; font: 1rem var(--sans); }
+.skip-link:focus { top: 1rem; }
+.main-nav a, .teacher-switch, .button, .button-small, .text-link, .inline-link, .journey-chapter a { font-size: .875rem; }
+.button, .menu-toggle, .report-tabs button, .journey-progress button, .solution-controls button { min-height: 44px; }
+.menu-toggle, .journey-progress button, .solution-controls button { min-width: 44px; }
+.hero h1 { line-height: .98; }
+.hero-lead { font: 1.125rem/1.75 var(--sans); }
+.hero-proof { flex-wrap: wrap; gap: 1rem 0; }
+.hero-proof > div { min-width: 0; }
+.hero-proof b { font-size: 1.625rem; line-height: 1.15; }
+.hero-proof span { font-size: .75rem; line-height: 1.5; }
+.section-head > p, .practice-item p, .journey-chapter p, .report-depth p, .subject-card p, .destination-copy > p, .lost p { font: 1rem/1.75 var(--sans); }
+.eyebrow { font-size: .75rem; letter-spacing: .09em; }
+.signal-top span, .signal-top i, .hero-signal small, .signal-progress > span, .signal-bottom { font-size: .75rem; line-height: 1.5; letter-spacing: 0; }
+.signal-top { flex-wrap: wrap; }
+.report-tabs { flex-wrap: wrap; }
+.report-tabs button { font-size: .875rem; }
+.dashboard-note span, .dashboard-note a, .footer, .footer small, .footer > div { font-size: .875rem; line-height: 1.6; }
+.student-faq h2 { font: 500 clamp(2.75rem,6vw,4.5rem)/1.05 var(--serif); margin: 1.5rem 0 2.5rem; }
+.student-faq h2 em { color: var(--green); }
+.faq-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; margin-bottom: 2rem; }
+.faq-grid article { border-top: 1px solid var(--rule); padding-top: 1.5rem; }
+.faq-grid h3 { font: 500 1.5rem/1.25 var(--serif); }
+.faq-grid p { font: 1rem/1.75 var(--sans); color: #c9cbc5; }
+.lost .actions { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+.lost { padding-block: 3rem; }
+@media (min-width:761px) and (max-width:1100px) {
+ .topbar { gap: 1rem; flex-wrap: wrap; height: auto; min-height: 80px; padding-block: .75rem; }
+ .main-nav { order: 3; width: 100%; }
+ .hero-copy { width: 65%; }
+ .hero-signal { width: 250px; }
+}
+@media (max-width:760px) {
+ .topbar { padding-inline: 1rem; gap: .5rem; }
+ .header-actions { gap: .5rem; }
+ .button-small { padding-inline: .75rem; font-size: .75rem; }
+ .teacher-switch { font-size: .75rem; }
+ .main-nav a { font-size: 1rem; min-height: 44px; }
+ .hero h1 { font-size: clamp(3.5rem,12vw,5.5rem); }
+ .hero-lead { font-size: 1rem; }
+ .hero-proof b { font-size: 1.375rem; }
+ .hero-proof span { font-size: .75rem; }
+ .hero-signal { width: min(320px,100%); }
+ .journey-scene { position: relative; top: auto; height: 350px; }
+ .journey-chapter { min-height: 0; padding-block: 2rem; scroll-margin-top: 90px; opacity: 1; }
+ .journey-chapter h3 { font-size: clamp(2.5rem,9vw,3.5rem); }
+ .journey-progress button { width: 44px; }
+ .faq-grid { grid-template-columns: 1fr; }
+ .report-depth { grid-template-columns: 1fr; }
+ .report-depth > div { border-right: 0; }
+ .report-view { overflow-x: auto; }
+ .report-view p, .student-dashboard-welcome p, .target-rank-card > p, .marks-reach-card > p, .test-insight-card > p, .coach-note > p, .solution-question p, .solution-next-step p { font-size: .875rem !important; line-height: 1.65; }
+ .available-test-row { grid-template-columns: 28px minmax(0,1fr); }
+ .available-test-row > a { grid-column: 2; justify-self: start; font-size: .875rem; min-height: 44px; display: inline-flex; align-items: center; }
+ .available-test-row > span > b, .coverage-row > span, .rank-gate > b, .fastest-path > div > b, .mark-gain-row > span, .chapter-score > span { font-size: .875rem; }
+ .available-test-row > span > small, .coverage-row > strong, .rank-gate > span, .fastest-path > div > small, .chapter-score > b, .solution-caption, .pace-count-grid > div > span, .chapter-time-list > div, .chapter-time-list > div strong { font-size: .75rem; }
+ .chapter-score, .chapter-time-list > div { flex-wrap: wrap; gap: .5rem; }
+ .solution-top { flex-wrap: wrap; font-size: .75rem; }
+ .solution-question, .solution-next-step { grid-template-columns: 23px minmax(0,1fr); }
+ .step-check { display: none; }
+ .equation-block { font-size: 1rem; overflow-wrap: anywhere; }
+ .test-score-head { grid-template-columns: 1fr; }
+ .footer > div { flex-wrap: wrap; justify-content: flex-start; gap: 1rem; }
+ /* Navigation remains available if JavaScript is unavailable. */
+ html:not(.js-ready) .topbar { position: relative; height: auto; flex-wrap: wrap; padding-block: 1rem; }
+ html:not(.js-ready) .main-nav { position: static; display: flex; flex-wrap: wrap; order: 3; width: 100%; }
+ html:not(.js-ready) .menu-toggle { display: none; }
+}
+@media (max-width:400px) {
+ .topbar { height: auto; min-height: 68px; flex-wrap: wrap; padding-block: .5rem; }
+ .header-actions { margin-left: auto; }
+ .main-nav { top: 100%; }
+ .hero-proof > div { padding-inline: .5rem; }
+ .hero-proof b { font-size: 1.15rem; }
+}
+@media (prefers-reduced-motion:reduce) {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Keep RT prominent in every wordmark, including mobile and footer variants. */
+.brand-name em {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 700;
+  font-style: normal;
+  line-height: inherit;
+  letter-spacing: 0;
+  margin-left: 0;
+  color: var(--green);
+}
