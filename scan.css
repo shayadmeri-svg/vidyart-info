@@ -184,3 +184,48 @@ body .scan-section-head h2 { font-family: var(--serif); font-weight: 500; }
  .student-site .teacher-switch { font-size: .75rem; }
  .student-site .menu-toggle { flex-shrink: 0; }
 }
+
+/* Explicit placement keeps test details, badges, and actions from sharing cells. */
+.student-site .available-tests > .widget-title {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+  margin-bottom: 16px;
+}
+.student-site .available-tests > .widget-title > b { font-size: 1.125rem; line-height: 1.4; }
+.student-site .available-tests > .widget-title > span { font-size: .875rem; line-height: 1.5; }
+.student-site .available-test-row {
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  grid-template-areas: "icon copy action" "icon status action";
+  align-items: start;
+  gap: 8px 12px;
+  padding-block: 20px;
+}
+.student-site .available-test-row > i { grid-area: icon; width: 32px; height: 32px; margin-top: 2px; }
+.student-site .available-test-row > span { grid-area: copy; min-width: 0; gap: 6px; }
+.student-site .available-test-row > span > b { font-size: 1rem; line-height: 1.4; }
+.student-site .available-test-row > span > small { font-size: .875rem; line-height: 1.55; }
+.student-site .available-test-row > strong { grid-area: status; font-size: .75rem; line-height: 1.5; }
+.student-site .available-test-row > a {
+  grid-area: action;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: end;
+  min-height: 44px;
+  padding: 11px 14px;
+  font-size: .875rem;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .student-site .available-tests > .widget-title { flex-direction: column; align-items: flex-start; }
+  .student-site .available-test-row {
+    grid-template-columns: 32px minmax(0, 1fr);
+    grid-template-areas: "icon copy" "icon status" "action action";
+    gap: 10px 12px;
+  }
+  .student-site .available-test-row > a { justify-self: stretch; width: 100%; margin-top: 4px; }
+}

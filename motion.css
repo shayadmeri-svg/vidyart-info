@@ -1,0 +1,62 @@
+/* Balanced sections and progressive motion. Content remains readable without JS. */
+body .section-head, body .report-intro, body .paper-science-intro { align-items:center; gap:clamp(24px,4vw,56px); }
+body .section-head h2, body .report-intro h2 { margin:0; max-width:18ch; }
+body .section-head .scan-list, body .report-intro .scan-list { margin-bottom:0; }
+body .scan-details { margin-block:24px; }
+body .scan-details > summary { padding:18px 24px; }
+.student-site .practice-layout { grid-template-columns:.9fr 1.1fr; gap:28px; align-items:stretch; }
+.student-site .practice-visual { position:relative; top:auto; display:flex; flex-direction:column; }
+.student-site .practice-visual > img { flex:1; height:100%; min-height:0; object-fit:cover; }
+.student-site .practice-list { grid-template-columns:repeat(2,minmax(0,1fr)); padding:24px; gap:24px; }
+.student-site .practice-item,.student-site .practice-item:first-child { padding:0 0 20px; }
+.student-site .practice-item h3 { font-size:1.5rem; }
+.student-site .practice-list > .inline-link { padding:0; }
+.student-site .report-depth { gap:16px; }
+.student-site .report-depth > div { padding:24px; border:1px solid var(--scan-rule); border-radius:16px; background:#111a14; }
+.student-site .report-depth > div > b { font-size:1.5rem; }
+.student-site .report-depth .scan-list { margin:0; }
+.teacher-site .teacher-ethos,.teacher-site .teacher-next-step { gap:clamp(24px,4vw,48px); margin-block:32px; align-items:stretch; }
+.teacher-site .teacher-ethos figure,.teacher-site .teacher-next-step figure { margin:0; height:100%; min-height:320px; }
+.teacher-site .teacher-ethos > div,.teacher-site .teacher-next-step > div { align-self:center; padding:20px 0; }
+.teacher-site .teacher-ethos .scan-list { margin-bottom:0; }
+body .motion-enter { animation:soft-enter .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes soft-enter { from { opacity:.15; translate:0 24px; } to { opacity:1; translate:0 0; } }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+ .learning-card,.teacher-feature-grid article,.report-depth > div,.report-depth-grid article,.discovery-card { transition:translate .3s ease,box-shadow .3s ease,border-color .3s ease; }
+ .learning-card:hover,.teacher-feature-grid article:hover,.report-depth > div:hover,.report-depth-grid article:hover,.discovery-card:hover { translate:0 -5px; box-shadow:0 16px 36px #0002; border-color:#62c791; }
+ .learning-card img { transition:scale .65s ease; }
+ .learning-card:hover img { scale:1.035; }
+}
+.story-controls { display:none; }
+.story-track.is-pinned { position:relative; height:var(--story-length); }
+.story-track.is-pinned .story-stage { position:sticky; top:var(--story-top); }
+body .is-pinned .story-deck { display:grid; grid-template-columns:minmax(0,1fr); gap:0; }
+body .is-pinned .story-deck > article { grid-area:1/1; opacity:0; visibility:hidden; translate:0 20px; transition:opacity .4s ease,translate .4s ease,visibility .4s; pointer-events:none; }
+body .is-pinned .story-deck > article.is-active { opacity:1; visibility:visible; translate:0 0; pointer-events:auto; }
+.is-pinned .story-controls { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0; font: .875rem/1.4 var(--sans); }
+.story-controls button { border:1px solid #62c79166; background:#17271e; color:#eaf3ed; padding:10px 16px; min-height:44px; border-radius:999px; cursor:pointer; font:inherit; }
+.story-controls button:disabled { opacity:.4; cursor:default; }
+.story-controls button:focus-visible { outline:2px solid #62c791; outline-offset:3px; }
+.story-progress { position:absolute; bottom:0; height:2px; width:100%; background:#62c79133; }
+.story-progress::after { content:''; display:block; height:100%; width:var(--story-progress,25%); background:#62c791; transition:width .3s; }
+@media(max-width:900px) {
+ .student-site .practice-layout { grid-template-columns:1fr; }
+ .student-site .practice-visual { max-width:none; }
+ .student-site .practice-visual > img { height:auto; aspect-ratio:16/9; flex:none; }
+}
+@media(max-width:650px) {
+ body .section-head,body .report-intro { gap:20px; margin-bottom:28px; }
+ body .section-head h2,body .report-intro h2 { font-size:clamp(2rem,9vw,2.6rem); }
+ .student-site .practice-list { grid-template-columns:1fr; gap:20px; padding:22px; }
+ .student-site .report-depth > div { padding:22px; }
+ .teacher-site .teacher-ethos figure,.teacher-site .teacher-next-step figure { min-height:0; height:auto; }
+ body .is-pinned .learning-card figure { aspect-ratio:16/9; }
+ body .is-pinned .learning-card > div { padding:20px; }
+ body .is-pinned .learning-card h3 { margin-bottom:12px; }
+ body .is-pinned .teacher-feature-grid article { padding:30px 24px; background:radial-gradient(ellipse at top right,#315c3d,#19231b 75%); }
+ body .is-pinned .teacher-feature-grid h3 { font-size:2.25rem; margin-bottom:24px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ body .motion-enter { animation:none; }
+ body *,body *::before,body *::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
+}

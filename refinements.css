@@ -54,8 +54,6 @@ main, section, article, .hero-copy, .journey-chapters { min-width: 0; }
  .report-depth > div { border-right: 0; }
  .report-view { overflow-x: auto; }
  .report-view p, .student-dashboard-welcome p, .target-rank-card > p, .marks-reach-card > p, .test-insight-card > p, .coach-note > p, .solution-question p, .solution-next-step p { font-size: .875rem !important; line-height: 1.65; }
- .available-test-row { grid-template-columns: 28px minmax(0,1fr); }
- .available-test-row > a { grid-column: 2; justify-self: start; font-size: .875rem; min-height: 44px; display: inline-flex; align-items: center; }
  .available-test-row > span > b, .coverage-row > span, .rank-gate > b, .fastest-path > div > b, .mark-gain-row > span, .chapter-score > span { font-size: .875rem; }
  .available-test-row > span > small, .coverage-row > strong, .rank-gate > span, .fastest-path > div > small, .chapter-score > b, .solution-caption, .pace-count-grid > div > span, .chapter-time-list > div, .chapter-time-list > div strong { font-size: .75rem; }
  .chapter-score, .chapter-time-list > div { flex-wrap: wrap; gap: .5rem; }
